@@ -1,0 +1,1 @@
+Trong cấu hình vectorIcon
