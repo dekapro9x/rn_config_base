@@ -4,6 +4,8 @@ import {COLOR} from '../utils';
 const ContextContainer = createContext();
 
 const AppContext = (props) => {
+  const sliderHome = [];
+
   //Khởi tạo dữ liệu ban đầu cho toàn bộ cấu hình App 1:
   const appDataSetup = useRef({
     logoApp: '',
@@ -38,7 +40,7 @@ const AppContext = (props) => {
     homeSubMenu: [],
     homeParentMenu: [],
     homeDrawerMenu: [],
-    homeSlider: [],
+    homeSlider: sliderHome,
     homeBanner: [],
     appIntroImage: [],
     alwaysDisplayIntroducingImage: null,

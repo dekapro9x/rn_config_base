@@ -6048,7 +6048,7 @@ prompts@2.3.2, prompts@^2.0.1:
     kleur "^3.0.3"
     sisteransi "^1.0.4"
 
-prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -6126,6 +6126,11 @@ react-native-device-info@^5.6.5:
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.6.5.tgz#3f18d7c38b21cfc475163351a9aae6e9037a43a0"
   integrity sha512-l457wv7gYXSRnm38AH+NpCgKYa1zxxfN0EL8mTBxo+TnasXtk0FZ86zWDLhm4eqpcSH8xpT/+z2MQrATfqCaoA==
 
+react-native-fast-image@^8.3.2:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-8.3.2.tgz#e9db271b70b9634b7be054760914d80954f9898c"
+  integrity sha512-AJ0b4BEswRwa0bh4SibYUtXszEiaO88Lf4CZ1ib+t5ZfkAgsMk9Liv3L0LYnDblMJmSeGTr1+2ViIM8F2vamjg==
+
 react-native-gesture-handler@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.7.0.tgz#0ef74a5ba836832e497dc49eb1ce58baa6c617e5"
@@ -6162,6 +6167,22 @@ react-native-screens@^2.10.1:
   version "2.10.1"
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
   integrity sha512-Z2kKSk4AwWRQNCBmTjViuBQK0/Lx0jc25TZptn/2gKYUCOuVRvCekoA26u0Tsb3BIQ8tWDsZW14OwDlFUXW1aw==
+
+react-native-spinkit@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-native-spinkit/-/react-native-spinkit-1.5.0.tgz#598b4b138b1e95cc232dfb2fc7e64dcdd45de574"
+  integrity sha512-HHOIH3Lq+oFsmhPBO9Y2hcxkKNm955gmNBaFgNUrshhGU4Dqp8qWj3bbVrwjBJOC5W+cvHSqyTsfgmpMPoUoTA==
+  dependencies:
+    prop-types "^15.5.8"
+
+react-native-vector-icons@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-7.0.0.tgz#5b92ed363c867645daad48c559e1f99efcfbb813"
+  integrity sha512-Ku8+dTUAnR9pexRPQqsUcQEZlxEpFZsIy8iOFqVL/3mrUyncZJHtqJyx2cUOmltZIC6W2GI4IkD3EYzPerXV5g==
+  dependencies:
+    lodash "^4.17.15"
+    prop-types "^15.7.2"
+    yargs "^15.0.2"
 
 react-native@0.63.2:
   version "0.63.2"
@@ -7714,7 +7735,7 @@ yargs@^14.2.0:
     y18n "^4.0.0"
     yargs-parser "^15.0.1"
 
-yargs@^15.1.0, yargs@^15.3.1:
+yargs@^15.0.2, yargs@^15.1.0, yargs@^15.3.1:
   version "15.4.1"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-15.4.1.tgz#0d87a16de01aee9d8bec2bfbf74f67851730f4f8"
   integrity sha512-aePbxDmcYW++PaqBsJ+HYUFwCdv4LVvdnhBy78E57PIor8/OVvhMrADFFEDh8DHDFRv/O9i3lPhsENjO7QX0+A==

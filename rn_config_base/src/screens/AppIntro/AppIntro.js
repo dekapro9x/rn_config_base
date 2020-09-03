@@ -3,16 +3,28 @@ import React, {useEffect} from 'react';
 import {Text, View} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 
+//Setup :
+import {getInfoDevices} from '../../utils/constants/System';
+
+//Component:
+import {AppContainer} from '../../elements/AppContainer';
+
 function AppIntro() {
   useEffect(() => {
-    RNBootSplash.hide({duration: 1000});
+    getInfoDevicesSystem();
+    RNBootSplash.hide({duration: 2000});
     return () => {};
   }, []);
 
+  const getInfoDevicesSystem = async () => {
+    const getAPIPlatform = await getInfoDevices.getInfoDevicesApiLevelPlatform;
+    console.log('getAPIPlatform', getAPIPlatform);
+  };
+
   return (
-    <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+    <AppContainer>
       <Text> App Intro </Text>
-    </View>
+    </AppContainer>
   );
 }
 
