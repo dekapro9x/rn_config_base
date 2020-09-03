@@ -5,7 +5,7 @@ import RNBootSplash from 'react-native-bootsplash';
 
 function AppIntro() {
   useEffect(() => {
-    RNBootSplash.hide({duration: 250});
+    RNBootSplash.hide({duration: 1000});
     return () => {};
   }, []);
 
