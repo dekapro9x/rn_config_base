@@ -15,3 +15,8 @@ Thay dòng :
 [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
 Thành :
 [RNBootSplash initWithStoryboard:@"LaunchScreen" rootView:rootView];
+
+Cấu hình ảnh splash cho Android vào :
+app/src/main/res : Vào các thư mục mipmap-hdpi .... Để kiểm tra ảnh say khi chạy lệnh yarn generate-bootsplash cho được then ra và add thêm vào không?
+Vào trong AndroidManifest.xml chỉnh đường link ảnh từ mipmap/ic_launcher => bootsplash_logo
+<application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/bootsplash_logo" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="false" android:theme="@style/AppTheme">
