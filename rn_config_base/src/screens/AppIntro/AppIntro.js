@@ -1,6 +1,5 @@
 //Library:
 import React, {useEffect} from 'react';
-import {Text, View} from 'react-native';
 import RNBootSplash from 'react-native-bootsplash';
 
 //Setup :
@@ -8,6 +7,7 @@ import {getInfoDevices} from '../../utils/constants/System';
 
 //Component:
 import {AppContainer} from '../../elements/AppContainer';
+import {Loading} from '../../elements/Loading';
 
 function AppIntro() {
   useEffect(() => {
@@ -23,7 +23,7 @@ function AppIntro() {
 
   return (
     <AppContainer>
-      <Text> App Intro </Text>
+      <Loading></Loading>
     </AppContainer>
   );
 }
