@@ -19,11 +19,14 @@ import AuthNavigator from './AuthNavigatior';
 import AppIntro from '../screens/AppIntro/AppIntro';
 
 import CurrentScreenServices from '../utils/services/CurrentScreenServices';
+import {NavigationService} from '../utils/services/NavigationService';
+
 const RootStack = createStackNavigator();
 function RootNavigator() {
   return (
     <>
       <NavigationContainer
+        ref={NavigationService.navigationRef}
         onStateChange={(event) => {
           const currentScreen = NavigationService.navigationRef.current.getCurrentRoute()
             .name;
@@ -36,16 +39,16 @@ function RootNavigator() {
             ...TransitionPresets.SlideFromRightIOS,
           }}>
           <RootStack.Screen
+            name={KEY_NAVIGATION.app_intro}
+            component={AppIntro}
+          />
+          <RootStack.Screen
             name={KEY_NAVIGATION.main_navigator}
             component={MainNavigator}
           />
           <RootStack.Screen
             name={KEY_NAVIGATION.auth_navigator}
             component={AuthNavigator}
-          />
-          <RootStack.Screen
-            name={KEY_NAVIGATION.app_intro}
-            component={AppIntro}
           />
         </RootStack.Navigator>
       </NavigationContainer>

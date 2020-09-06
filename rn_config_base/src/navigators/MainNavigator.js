@@ -27,7 +27,7 @@ function MainNavigator() {
           screenOptions={{
             ...TransitionPresets.SlideFromRightIOS,
           }}>
-          <MainStack.Screen name={KEY_NAVIGATION.login} component={Home} />
+          <MainStack.Screen name={KEY_NAVIGATION.home} component={Home} />
         </MainStack.Navigator>
       </View>
       <SafeAreaView style={{backgroundColor: COLOR.dark}} />

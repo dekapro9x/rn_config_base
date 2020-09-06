@@ -4,5 +4,6 @@ const KEY_NAVIGATION = {
   app_intro: 'APP_INTRO',
   home: 'HOME',
   login: 'LOGIN',
+  policy: 'POLICY',
 };
 export {KEY_NAVIGATION};
