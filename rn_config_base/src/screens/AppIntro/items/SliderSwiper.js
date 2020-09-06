@@ -9,13 +9,12 @@ import {SIZE, COLOR, KEY_NAVIGATION} from '../../../utils';
 import {AppImage} from '../../../elements/AppImage';
 import {AppText} from '../../../elements/AppText';
 
-//Data:
-import DATA_SLIDER_INTRO from './Data';
+//Component:
 import {Loading} from '../../../elements/Loading';
 
-export default function SliderSwiper() {
+export default function SliderSwiper(props) {
+  const {dataSlider, alwayShowSlider} = props;
   const navigation = useNavigation();
-  const [alwayShowSlider, setStateAlwayShowSlider] = useState(true);
   const [loading, setStateLoading] = useState(true);
   useEffect(() => {
     let timeCount = setTimeout(() => {
@@ -45,18 +44,17 @@ export default function SliderSwiper() {
 
   //Bắt đầu dùng app:
   const onPressStartApp = () => {
-    navigation.navigate(KEY_NAVIGATION.auth_navigator, {
+    navigation.replace(KEY_NAVIGATION.auth_navigator, {
       screen: KEY_NAVIGATION.policy,
       params: {},
     });
-    console.log('StartApp');
   };
 
   //Danh sách slider.
   const mapSlider = () => {
-    let listSlider = DATA_SLIDER_INTRO.map((item, index) => {
-      console.log(index, DATA_SLIDER_INTRO.length);
-      if (index < DATA_SLIDER_INTRO.length - 1) {
+    let listSlider = dataSlider.map((item, index) => {
+      console.log(index, dataSlider.length);
+      if (index < dataSlider.length - 1) {
         return (
           <View key={`${index}`} style={styles.slider}>
             <AppImage

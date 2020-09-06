@@ -8,7 +8,11 @@ import {getInfoDevices} from '../../utils/constants/System';
 import {COLOR} from '../../utils';
 
 //Component:
-import SliderSwiper from './items/SliderSwiper';
+// import SliderSwiper from './items/SliderSwiper';
+import SliderHandler from './items/SliderHandler';
+
+//Data:
+import DATA_SLIDER_INTRO from './items/Data';
 
 function AppIntroScreen() {
   useEffect(() => {
@@ -22,8 +26,13 @@ function AppIntroScreen() {
   };
 
   return (
-    <SafeAreaView style={{backgroundColor: COLOR.main_background, flex: 1}}>
-      <SliderSwiper></SliderSwiper>
+    <SafeAreaView style={{backgroundColor: COLOR.TRANSPARENT, flex: 1}}>
+      {/* <SliderSwiper
+        dataSlider={DATA_SLIDER_INTRO}
+        alwayShowSlider={true}></SliderSwiper> */}
+      <SliderHandler
+        dataSlider={DATA_SLIDER_INTRO}
+        alwayShowSlider={true}></SliderHandler>
     </SafeAreaView>
   );
 }
