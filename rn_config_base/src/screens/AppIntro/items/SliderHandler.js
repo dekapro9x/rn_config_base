@@ -72,7 +72,7 @@ export default function SliderHandler(props) {
   };
 
   //Item Slider:
-  const renderSlider = () => {
+  const renderItemSlider = () => {
     const listSlider = dataSlider.map((item, index) => {
       if (index === dataSlider.length - 1) {
         return (
@@ -150,7 +150,7 @@ export default function SliderHandler(props) {
             useNativeDriver: true,
           },
         )}>
-        {renderSlider()}
+        {renderItemSlider()}
       </Animated.ScrollView>
       <View
         style={{

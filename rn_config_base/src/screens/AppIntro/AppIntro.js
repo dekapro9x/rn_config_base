@@ -9,7 +9,8 @@ import {COLOR} from '../../utils';
 
 //Component:
 // import SliderSwiper from './items/SliderSwiper';
-import SliderHandler from './items/SliderHandler';
+// import SliderHandler from './items/SliderHandler';
+import SliderTouch from './items/SliderTouch';
 
 //Data:
 import DATA_SLIDER_INTRO from './items/Data';
@@ -30,9 +31,12 @@ function AppIntroScreen() {
       {/* <SliderSwiper
         dataSlider={DATA_SLIDER_INTRO}
         alwayShowSlider={true}></SliderSwiper> */}
-      <SliderHandler
+      {/* <SliderHandler
         dataSlider={DATA_SLIDER_INTRO}
-        alwayShowSlider={true}></SliderHandler>
+        alwayShowSlider={true}></SliderHandler> */}
+      <SliderTouch
+        dataSlider={DATA_SLIDER_INTRO}
+        alwayShowSlider={true}></SliderTouch>
     </SafeAreaView>
   );
 }
