@@ -1,11 +1,9 @@
 import React, {useRef, createContext} from 'react';
 import {COLOR} from '../utils';
-
+import DATA_SLIDER_INTRO from '../screens/AppIntro/items/Data';
 const ContextContainer = createContext();
 
 const AppContext = (props) => {
-  const sliderHome = [];
-
   //Khởi tạo dữ liệu ban đầu cho toàn bộ cấu hình App 1:
   const appDataSetup = useRef({
     logoApp: '',
@@ -37,10 +35,10 @@ const AppContext = (props) => {
       inactiveTabBackground: COLOR.white,
     },
     homeBottomMenu: [],
+    sliderAppIntro: DATA_SLIDER_INTRO,
     homeSubMenu: [],
     homeParentMenu: [],
     homeDrawerMenu: [],
-    homeSlider: sliderHome,
     homeBanner: [],
     appIntroImage: [],
     alwaysDisplayIntroducingImage: null,

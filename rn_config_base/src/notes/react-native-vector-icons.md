@@ -9,7 +9,7 @@ android: {}, // grouped into "project"
 assets: ['./assets/fonts/', 'react-native-vector-icons'], // stays the same
 };
 
-IOS : Trong info.splist
+IOS : Trong info.splist dòng 56:
 Thêm :
 <key>UIAppFonts</key>
 <array>
@@ -33,7 +33,7 @@ Thêm :
 
 B2: cd ios, pod install.
 B3: chạy lệnh yarn react-native link
-B4: Vào Xcode phần auto link : Build Phases xóa tất cả link tay của pod đi không lỗi.
+B4: Vào Xcode phần auto link : Build Phases xóa tất cả link tay của pod đi không lỗi duplicate.
 
 Android:
 

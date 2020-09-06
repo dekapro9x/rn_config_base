@@ -9,7 +9,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/core';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 //Setup:
 import {SIZE, COLOR} from '../utils/resource';
@@ -85,9 +85,9 @@ const AppContainer = (props) => {
               flexDirection: 'row',
               alignItems: 'center',
             }}>
-            <AntDesign
+            <Entypo
               style={{marginLeft: SIZE.width(2)}}
-              name="left"
+              name="chevron-left"
               size={18}
               color={COLOR.black}
             />
