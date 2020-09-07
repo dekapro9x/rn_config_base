@@ -51,7 +51,7 @@ export default function SliderSwiper(props) {
   };
 
   //Danh sách slider.
-  const mapSlider = () => {
+  const listSlider = () => {
     let listSlider = dataSlider.map((item, index) => {
       console.log(index, dataSlider.length);
       if (index < dataSlider.length - 1) {
@@ -125,13 +125,14 @@ export default function SliderSwiper(props) {
         showsHorizontalScrollIndicator={false}
         horizontal={true}
         onIndexChanged={(index) => onIndexChangeSlider(index)}
-        onTouchStart={() => {}}
-        onTouchEnd={() => {}}
-        onMomentumScrollEnd={() => {}}
         nextButton={rederNextButton()}
         prevButton={renderPrevButton()}
-        onTouchStartCapture={() => {}}>
-        {mapSlider()}
+        // onTouchStartCapture={() => {}}
+        // onTouchStart={() => {}}
+        // onTouchEnd={() => {}}
+        // onMomentumScrollEnd={() => {}}
+      >
+        {listSlider()}
       </Swiper>
     );
   } else {

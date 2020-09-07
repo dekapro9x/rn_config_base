@@ -4,7 +4,7 @@ import {ImageBackground, View, TouchableOpacity} from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
 //Setup:
-import {SIZE, COLOR} from '../../utils';
+import {SIZE, COLOR, KEY_NAVIGATION} from '../../utils';
 
 //Component:
 import {AppText} from '../../elements/AppText';
@@ -16,7 +16,7 @@ const Entry = ({navigation}) => {
   const onStartApp = () => {
     navigation.reset({
       index: 0,
-      routes: [{name: keyNavigation.MAIN_NAVIGATOR}],
+      routes: [{name: KEY_NAVIGATION.main_navigator}],
     });
     setStateLockButton(true);
   };
