@@ -2,7 +2,7 @@
 import React from 'react';
 import {createStackNavigator, TransitionPresets} from '@react-navigation/stack';
 import Policy from '../screens/Policy/Policy';
-import Login from '../screens/Login/Login';
+import Entry from '../screens/Entry/Entry';
 
 //Setup:
 import {KEY_NAVIGATION} from '../utils';
@@ -19,7 +19,7 @@ const AuthNavigator = () => {
           ...TransitionPresets.SlideFromRightIOS,
         }}>
         <AuthStack.Screen name={KEY_NAVIGATION.policy} component={Policy} />
-        <AuthStack.Screen name={KEY_NAVIGATION.login} component={Login} />
+        <AuthStack.Screen name={KEY_NAVIGATION.entry} component={Entry} />
       </AuthStack.Navigator>
     </>
   );

@@ -5,5 +5,6 @@ const KEY_NAVIGATION = {
   home: 'HOME',
   login: 'LOGIN',
   policy: 'POLICY',
+  entry: 'ENTRY',
 };
 export {KEY_NAVIGATION};

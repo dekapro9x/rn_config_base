@@ -1,16 +1,15 @@
 //Library:
 import React from 'react';
-import {View} from 'react-native';
 
 //Component:
 import PolicyHTML from './items/PolicyHTML';
 import {AppHeader} from '../../elements/AppHeader';
 
-export default function Policy() {
+export default function Policy({navigation, route}) {
   return (
     <>
       <AppHeader title={'POLICY'} leftGoBack={false}></AppHeader>
-      <PolicyHTML />
+      <PolicyHTML navigation={navigation} />
     </>
   );
 }

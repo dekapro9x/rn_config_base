@@ -10,7 +10,7 @@ const AppContext = (props) => {
     policy: '',
     colorApp: {
       //Màu nền của toàn bộ các màn hình APP:
-      backgroundColor: COLOR.main_background,
+      backgroundColor: COLOR.white,
       //Màu chữ mặc định toàn bộ APP:
       textColor: COLOR.black,
 

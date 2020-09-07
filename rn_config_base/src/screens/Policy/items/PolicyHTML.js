@@ -1,14 +1,15 @@
 //Library:
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useRef} from 'react';
 import {View, ScrollView, StyleSheet} from 'react-native';
 import HTML from 'react-native-render-html';
 //Setup:
-import {COLOR, SIZE} from '../../../utils';
+import {COLOR, SIZE, KEY_NAVIGATION} from '../../../utils';
+
 //Data:
 import {DATA_POLICY} from './DataPolicy';
 import {AppTextButton} from '../../../elements/AppTextButton';
 
-export default function PolicyHTML() {
+export default function PolicyHTML({navigation}) {
   const showButton = useRef(true);
   const convertHtmlContent = (content) => {
     const customContent = content
@@ -24,9 +25,7 @@ export default function PolicyHTML() {
   };
   //Đồng ý và bắt đầu dùng app.
   const onPressAcceptPolicy = () => {
-    // navigation.reset({
-    //   routes: [{name: keyNavigation.ENTRY}],
-    // });
+    navigation.replace(KEY_NAVIGATION.entry);
   };
 
   return (
