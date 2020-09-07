@@ -1,12 +1,16 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+//Library:
+import React from 'react';
+import {View} from 'react-native';
 
-export default class Policy extends Component {
-  render() {
-    return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
-    );
-  }
+//Component:
+import PolicyHTML from './items/PolicyHTML';
+import {AppHeader} from '../../elements/AppHeader';
+
+export default function Policy() {
+  return (
+    <>
+      <AppHeader title={'POLICY'} leftGoBack={false}></AppHeader>
+      <PolicyHTML />
+    </>
+  );
 }
