@@ -1,13 +1,13 @@
 //Library:
-import React, {useEffect} from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 //Setup:
-import {SIZE, COLOR, KEY_NAVIGATION} from '../../../utils';
+import {SIZE, COLOR} from '../../../utils';
 
 //Component:
-import {AppImageButton, Loading, AppText, AppImage} from '../../../elements';
+import {AppImage} from '../../../elements';
 
 const HomeSlider = (props) => {
   const {dataSlider, index, navigation} = props;
@@ -18,8 +18,8 @@ const HomeSlider = (props) => {
         <View
           key={`${index}`}
           style={{
-            height: (SIZE.width(100) * 9) / 16,
-            width: SIZE.width(100),
+            height: (SIZE.device_width * 9) / 16,
+            width: '100%',
             backgroundColor: 'green',
           }}>
           <AppImage
@@ -27,7 +27,7 @@ const HomeSlider = (props) => {
               uri: item.img,
             }}
             style={{
-              height: '100%',
+              height: (SIZE.device_width * 9) / 16,
               width: '100%',
               alignSelf: 'center',
             }}
@@ -41,7 +41,9 @@ const HomeSlider = (props) => {
 
   return (
     <Swiper
-      style={{height: (SIZE.device_width * 9) / 16}}
+      style={{
+        height: (SIZE.device_width * 9) / 16,
+      }}
       //renderPagination Dùng để custom lại Slider với index dot tương ứng, với tỷ lệ khung hình mà không bị vượt quá giới hạn cho phép.
       // Slider bao gồm cả Ảnh hiển thị và dấu chấm index.
       renderPagination={(indexActive, total, context) => {
@@ -49,12 +51,10 @@ const HomeSlider = (props) => {
           <View
             style={{
               flexDirection: 'row',
-              width: SIZE.device_width,
-              backgroundColor: COLOR.COLOR_ORANGE,
+              backgroundColor: COLOR.blue_light_4,
               justifyContent: 'center',
               alignItems: 'center',
               paddingVertical: 6,
-              marginBottom: 10,
             }}>
             {Array(total)
               .fill(null)
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   },
 });
 
+//Dùng React.memo() hạn chế render lại Component nếu props không thay đổi.
 export default React.memo(HomeSlider);
 
 //Lưu ý :
