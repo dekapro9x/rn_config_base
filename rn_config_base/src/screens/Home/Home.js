@@ -5,38 +5,24 @@ import {
   TouchableOpacity,
   ScrollView,
   ImageBackground,
-  Image,
 } from 'react-native';
 import {DrawerActions} from '@react-navigation/native';
 import {COLOR, SIZE} from '../../utils';
 
 //Component:
-import Slider from './items/Slider';
+import HeaderHome from './items/HeaderHome';
+import SliderHome from './items/SliderHome';
+import TabViewHome from './items/TabViewHome';
 //Data:
 import DATA_SLIDER_HOME from './items/DataSlider';
 
 export default function Home({navigation}) {
   return (
-    <ScrollView style={{backgroundColor: '#F9F0F0', flex: 1}}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      style={{backgroundColor: '#F9F0F0', flex: 1}}>
       <SafeAreaView style={{backgroundColor: COLOR.white}} />
-      {/* Tiêu đề và tên màn hình */}
-      {/* <View
-        style={{
-          height: SIZE.width(15),
-          width: SIZE.width(100),
-          backgroundColor: 'red',
-          flexDirection: 'row',
-        }}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.dispatch(DrawerActions.openDrawer());
-          }}
-          style={{
-            height: SIZE.width(15),
-            width: SIZE.width(30),
-            backgroundColor: 'green',
-          }}></TouchableOpacity>
-      </View> */}
+      {/* <HeaderHome></HeaderHome> */}
       {/* Ảnh Slider. */}
       <View>
         <View
@@ -57,7 +43,7 @@ export default function Home({navigation}) {
         </View>
         <View
           style={{
-            height: SIZE.height(12),
+            height: SIZE.height(16),
             width: SIZE.width(100),
             backgroundColor: '#F9F0F0',
           }}></View>
@@ -65,23 +51,24 @@ export default function Home({navigation}) {
           style={{
             position: 'absolute',
             height: SIZE.height(20),
-            top: SIZE.height(15),
+            top: SIZE.height(18),
             alignItems: 'center',
             borderRadius: 20,
             overflow: 'hidden',
             left: 20,
             right: 20,
           }}>
-          <Slider dataSlider={DATA_SLIDER_HOME}></Slider>
+          <SliderHome dataSlider={DATA_SLIDER_HOME}></SliderHome>
         </View>
       </View>
-
       <ImageBackground
         source={{uri: 'https://sackim.com/wp-content/uploads/2020/01/14.jpg'}}
         style={{
           height: SIZE.height(100),
           width: SIZE.width(100),
-        }}></ImageBackground>
+        }}>
+        <TabViewHome></TabViewHome>
+      </ImageBackground>
     </ScrollView>
   );
 }

@@ -9,6 +9,7 @@ Sau khi init app các thư viện bắt buộc phải cài:
 8: react-native-render-html: https://github.com/archriss/react-native-render-html : Hiển thị data dạng HTML.
 9:react-native-webview : https://github.com/react-native-community/react-native-webview : Mở Webview.
 10:react-native-animatable : https://github.com/oblador/react-native-animatable: Tạo các hiệu ứng động cho App.
+11: hex-to-rgba :https://www.npmjs.com/package/hex-to-rgba : Lấy mã màu # chuyển sang rgba để tính % độ mờ so với màu gốc.
 
 Cấu hình lại file gitignore cho từng App tránh hiện tượng đẩy lên git các file không cần thiết gây nặng Git.
 Coppy file react-native.config để cấu hình font và vector icon.

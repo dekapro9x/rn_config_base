@@ -9,7 +9,7 @@ import {SIZE, COLOR} from '../../../utils';
 //Component:
 import {AppImage} from '../../../elements';
 
-const HomeSlider = (props) => {
+const SliderHome = (props) => {
   const {dataSlider, index, navigation} = props;
 
   const listSlider = () => {
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 });
 
 //Dùng React.memo() hạn chế render lại Component nếu props không thay đổi.
-export default React.memo(HomeSlider);
+export default React.memo(SliderHome);
 
 //Lưu ý :
 //Slider của app này không còn được lấy trong useContext vì nó sẽ được hiển thị chỉ định cho từng user theo favorite và categori:

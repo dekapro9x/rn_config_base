@@ -30,6 +30,7 @@
     "react-native-screens": "^2.10.1",
     "react-native-spinkit": "^1.5.0",
     "react-native-swiper": "^1.6.0",
+    "react-native-tab-view": "^2.15.1",
     "react-native-vector-icons": "^7.0.0",
     "react-native-webview": "^10.8.3",
     "yarn": "^1.22.4"
