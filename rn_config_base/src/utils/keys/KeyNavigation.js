@@ -6,5 +6,6 @@ const KEY_NAVIGATION = {
   login: 'LOGIN',
   policy: 'POLICY',
   entry: 'ENTRY',
+  drawer: 'DRAWER',
 };
 export {KEY_NAVIGATION};

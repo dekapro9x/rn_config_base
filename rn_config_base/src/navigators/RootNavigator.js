@@ -18,10 +18,15 @@ import AuthNavigator from './AuthNavigatior';
 //Các màn hình không cần xác thực dùng cho toàn App:
 import AppIntro from '../screens/AppIntro/AppIntro';
 
+//Màn hình Drawer:
+import DrawerNavigator from './DrawerNavigator';
+
+//Services:
 import CurrentScreenServices from '../utils/services/CurrentScreenServices';
 import {NavigationService} from '../utils/services/NavigationService';
 
 const RootStack = createStackNavigator();
+
 function RootNavigator() {
   return (
     <>
@@ -49,6 +54,10 @@ function RootNavigator() {
           <RootStack.Screen
             name={KEY_NAVIGATION.auth_navigator}
             component={AuthNavigator}
+          />
+          <RootStack.Screen
+            name={KEY_NAVIGATION.drawer}
+            component={DrawerNavigator}
           />
         </RootStack.Navigator>
       </NavigationContainer>

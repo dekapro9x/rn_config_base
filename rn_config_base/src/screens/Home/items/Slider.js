@@ -12,22 +12,6 @@ import {AppImageButton, Loading, AppText, AppImage} from '../../../elements';
 const HomeSlider = (props) => {
   const {dataSlider, index, navigation} = props;
 
-  const renderItemSlider = (item, index) => {
-    return (
-      <AppImage
-        source={{
-          uri: item.img,
-        }}
-        style={{
-          height: '100%',
-          width: '100%',
-          alignSelf: 'center',
-        }}
-        resizeMode="cover"
-      />
-    );
-  };
-
   const listSlider = () => {
     const listSlider = dataSlider.map((item, index) => {
       return (
@@ -38,7 +22,17 @@ const HomeSlider = (props) => {
             width: SIZE.width(100),
             backgroundColor: 'green',
           }}>
-          {renderItemSlider(item, index)}
+          <AppImage
+            source={{
+              uri: item.img,
+            }}
+            style={{
+              height: '100%',
+              width: '100%',
+              alignSelf: 'center',
+            }}
+            resizeMode="cover"
+          />
         </View>
       );
     });
@@ -47,8 +41,32 @@ const HomeSlider = (props) => {
 
   return (
     <Swiper
-      dotStyle={styles.dotStyle}
-      activeDotStyle={styles.activeDotStyle}
+      style={{height: (SIZE.device_width * 9) / 16}}
+      //renderPagination Dùng để custom lại Slider với index dot tương ứng, với tỷ lệ khung hình mà không bị vượt quá giới hạn cho phép.
+      // Slider bao gồm cả Ảnh hiển thị và dấu chấm index.
+      renderPagination={(indexActive, total, context) => {
+        return (
+          <View
+            style={{
+              flexDirection: 'row',
+              width: SIZE.device_width,
+              backgroundColor: COLOR.COLOR_ORANGE,
+              justifyContent: 'center',
+              alignItems: 'center',
+              paddingVertical: 6,
+              marginBottom: 10,
+            }}>
+            {Array(total)
+              .fill(null)
+              .map((item, index) => {
+                if (index === indexActive) {
+                  return <View key={`${index}`} style={styles.dotStyle} />;
+                }
+                return <View key={`${index}`} style={styles.activeDotStyle} />;
+              })}
+          </View>
+        );
+      }}
       loop={true}
       autoplayTimeout={3}
       horizontal={true}
@@ -60,10 +78,18 @@ const HomeSlider = (props) => {
 
 const styles = StyleSheet.create({
   activeDotStyle: {
-    marginBottom: SIZE.height(54),
+    height: 10,
+    width: 10,
+    borderRadius: 5,
+    marginHorizontal: 6,
+    backgroundColor: COLOR.COLOR_YELLOW,
   },
   dotStyle: {
-    marginBottom: SIZE.height(54),
+    height: 10,
+    width: 10,
+    borderRadius: 5,
+    marginHorizontal: 6,
+    backgroundColor: COLOR.white,
   },
 });
 
