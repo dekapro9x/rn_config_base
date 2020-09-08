@@ -1,10 +1,20 @@
+//Library:
 import React, {useState} from 'react';
-import {View, Dimensions} from 'react-native';
+import {View} from 'react-native';
 import {TabView, TabBar} from 'react-native-tab-view';
+
+//Setup:
 import {AppText} from '../../../elements';
+
+//
 import {COLOR, SIZE} from '../../../utils';
+import MenuHome from './MenuHome';
+
 export default function TabViewHome() {
+  //Index: Vị trí tabview đầu tiên được active:
   const [index, setIndex] = useState(0);
+
+  //Routes số lượng tabview:
   const [routes] = useState([
     {
       key: 'menu',
@@ -25,32 +35,14 @@ export default function TabViewHome() {
   const renderScene = ({route}) => {
     switch (route.key) {
       case 'menu':
-        return (
-          <View
-            style={{height: 100, width: '100%', backgroundColor: 'red'}}></View>
-        );
-        break;
+        return <MenuHome></MenuHome>;
       case 'review':
-        return (
-          <View
-            style={{
-              height: 100,
-              width: '100%',
-              backgroundColor: 'green',
-            }}></View>
-        );
-        break;
+        return <MenuHome></MenuHome>;
       default:
-        return (
-          <View
-            style={{
-              height: 100,
-              width: '100%',
-              backgroundColor: 'yellow',
-            }}></View>
-        );
+        return <MenuHome></MenuHome>;
     }
   };
+
   //Hiển thị Tabbar:
   const renderTabBar = (props) => (
     <TabBar
@@ -65,14 +57,23 @@ export default function TabViewHome() {
       renderLabel={({route, focused, color}) => (
         <View
           style={{
-            backgroundColor: focused ? COLOR.COLOR_GREEN : COLOR.grey_300,
+            backgroundColor: focused ? COLOR.white : COLOR.white,
+            borderBottomWidth: SIZE.width(0.8),
+            borderBottomColor: focused ? COLOR.red : COLOR.TRANSPARENT,
             width: SIZE.width(46),
             justifyContent: 'center',
             alignItems: 'center',
             paddingVertical: 10,
             borderRadius: 6,
           }}>
-          <AppText>{route.title}</AppText>
+          <AppText
+            style={{
+              fontWeight: 'bold',
+              fontSize: SIZE.H3,
+              color: focused ? COLOR.red : COLOR.black,
+            }}>
+            {route.title}
+          </AppText>
         </View>
       )}
       renderIndicator={() => null}
@@ -83,7 +84,7 @@ export default function TabViewHome() {
   );
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{flex: 1, marginTop: 20}}>
       <TabView
         lazy
         swipeEnabled={false}

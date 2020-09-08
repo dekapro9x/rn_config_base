@@ -14,7 +14,7 @@ import HeaderHome from './items/HeaderHome';
 import SliderHome from './items/SliderHome';
 import TabViewHome from './items/TabViewHome';
 //Data:
-import DATA_SLIDER_HOME from './items/DataSlider';
+import DATA_SLIDER_HOME from './data/DataSlider';
 
 export default function Home({navigation}) {
   return (
