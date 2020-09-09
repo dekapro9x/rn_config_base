@@ -10,8 +10,9 @@ import {SIZE, COLOR} from '../../../utils';
 import {AppImage} from '../../../elements';
 
 const SliderHome = (props) => {
-  const {dataSlider, index, navigation} = props;
+  const {dataSlider} = props;
 
+  //Danh sách Slider:
   const listSlider = () => {
     const listSlider = dataSlider.map((item, index) => {
       return (
@@ -20,7 +21,6 @@ const SliderHome = (props) => {
           style={{
             height: (SIZE.device_width * 9) / 16,
             width: '100%',
-            backgroundColor: 'green',
           }}>
           <AppImage
             source={{
@@ -42,7 +42,7 @@ const SliderHome = (props) => {
   return (
     <Swiper
       style={{
-        height: (SIZE.device_width * 9) / 16,
+        height: (SIZE.device_width * 9) / 10,
       }}
       //renderPagination Dùng để custom lại Slider với index dot tương ứng, với tỷ lệ khung hình mà không bị vượt quá giới hạn cho phép.
       // Slider bao gồm cả Ảnh hiển thị và dấu chấm index.
@@ -51,7 +51,7 @@ const SliderHome = (props) => {
           <View
             style={{
               flexDirection: 'row',
-              backgroundColor: COLOR.blue_light_4,
+              backgroundColor: COLOR.gray_light,
               justifyContent: 'center',
               alignItems: 'center',
               paddingVertical: 6,
@@ -60,9 +60,21 @@ const SliderHome = (props) => {
               .fill(null)
               .map((item, index) => {
                 if (index === indexActive) {
-                  return <View key={`${index}`} style={styles.dotStyle} />;
+                  return (
+                    <View
+                      key={`${index}`}
+                      style={styles.dotStyle}
+                      item={item}
+                    />
+                  );
                 }
-                return <View key={`${index}`} style={styles.activeDotStyle} />;
+                return (
+                  <View
+                    key={`${index}`}
+                    style={styles.activeDotStyle}
+                    item={item}
+                  />
+                );
               })}
           </View>
         );
@@ -81,14 +93,14 @@ const styles = StyleSheet.create({
     height: 10,
     width: 10,
     borderRadius: 5,
-    marginHorizontal: 6,
+    marginHorizontal: 3,
     backgroundColor: COLOR.COLOR_YELLOW,
   },
   dotStyle: {
     height: 10,
     width: 10,
     borderRadius: 5,
-    marginHorizontal: 6,
+    marginHorizontal: 3,
     backgroundColor: COLOR.white,
   },
 });

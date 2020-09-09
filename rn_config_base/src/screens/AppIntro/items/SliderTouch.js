@@ -48,7 +48,7 @@ export default function SliderTouch(props) {
           position: 'absolute',
           flexDirection: 'row',
           alignItems: 'center',
-          bottom: SIZE.width(10),
+          bottom: SIZE.width(7),
           right: 10,
         }}>
         <AppTextButton

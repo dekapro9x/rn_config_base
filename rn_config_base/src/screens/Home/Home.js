@@ -44,14 +44,14 @@ export default function Home({navigation}) {
         </View>
         <View
           style={{
-            height: SIZE.height(16),
+            minHeight: SIZE.height(20),
             width: SIZE.width(100),
             backgroundColor: '#F9F0F0',
           }}></View>
         <View
           style={{
             position: 'absolute',
-            height: SIZE.height(20),
+            height: SIZE.height(25),
             top: SIZE.height(18),
             alignItems: 'center',
             borderRadius: 20,
