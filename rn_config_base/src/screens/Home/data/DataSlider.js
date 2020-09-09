@@ -2,26 +2,27 @@ const DATA_SLIDER_INTRO = [
   {
     id: 1,
     img:
-      'https://thuthuatnhanh.com/wp-content/uploads/2018/07/hinh-anh-thien-nhien-phong-canh-dep-nhat.jpg',
+      'https://static1.bestie.vn/Mlog/ImageContent/201712/cicf-14-20171213004150.jpg',
   },
   {
     id: 2,
     img:
-      'https://dean2020.edu.vn/wp-content/uploads/2019/03/anh-thien-nhien-dep-3.jpeg',
+      'https://khoanhkhacthanglong.vn/wp-content/uploads/2020/05/b4-e1588994466260.jpg',
   },
   {
     id: 3,
     img:
-      'https://i.pinimg.com/originals/a8/45/76/a84576a04c1874304735604d9f47d5a4.jpg',
+      'https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/04_2019/shushi4.jpg',
   },
   {
     id: 4,
     img:
-      'https://thongtinz.com/wp-content/uploads/2020/08/hinh-nen-phong-canh-29.jpg',
+      'https://lh3.googleusercontent.com/proxy/Pn9vC8_NevVrXoOmHgv1n-Hsp8rHpWvP_vNGsstu_OS2IxFXea2BG6zNgRqc1jP2rkY8csO9rY6EKz1Cqt8gO4yIjo8VNrExOA8oH36KitIzB8kPHpwTlDOa9H-bvKjAClJ5DwR7dzs7Dh4',
   },
   {
     id: 5,
-    img: 'https://miro.medium.com/max/1200/0*CarnbI_4daltBlf5.jpg',
+    img:
+      'https://gkedu.vn/wp-content/uploads/2019/03/636044104859117199985990752_tacos.jpg',
   },
 ];
 

@@ -15,6 +15,7 @@ import SliderHome from './items/SliderHome';
 import TabViewHome from './items/TabViewHome';
 //Data:
 import DATA_SLIDER_HOME from './data/DataSlider';
+import {dataMeuHome} from './data/DataMenu';
 
 export default function Home({navigation}) {
   return (
