@@ -21,7 +21,15 @@ const DATA_MENU_HOME = [
       link:
         'https://s3-ap-northeast-1.amazonaws.com/komeda/pdf/08fe3486-0e81-49f9-92de-6215ad6593c5sample3.pdf',
     },
-    {id: 3, type: 'none', screen: '', img: '', icon: '', name: '', link: ''},
+    {
+      id: 3,
+      type: 'icon',
+      screen: '',
+      img: 'https://img.icons8.com/cotton/2x/worldwide-location--v2.png',
+      icon: '',
+      name: 'Location',
+      link: '',
+    },
   ],
   [
     {id: 3, type: 'icon', screen: '', img: '', icon: '', name: '', link: ''},

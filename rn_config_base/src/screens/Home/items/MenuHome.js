@@ -1,17 +1,49 @@
 //Library:
-import React, {useRef} from 'react';
+import React, {useRef, useLayoutEffect, useState} from 'react';
 import {View, Animated, TouchableOpacity} from 'react-native';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/core';
 
 //Setup:
 import {SIZE, COLOR, KEY_NAVIGATION} from '../../../utils';
-import {AppText, AppImage} from '../../../elements';
+import {AppText, AppImage, Loading} from '../../../elements';
+//Component:
 
 export default function MenuHome(props) {
-  const navigation = useNavigation();
-  const itemAnimation = useRef(new Animated.Value(0.01)).current;
   const {dataMenuHome} = props;
+  const navigation = useNavigation();
+  const [loading, setStateLoading] = useState(true);
+  const itemAnimation = useRef(new Animated.Value(0.01)).current;
+  const scale = itemAnimation.interpolate({
+    inputRange: [0.01, 0.6, 1],
+    outputRange: [0.01, 0.6, 1],
+  });
+  const opacity = itemAnimation.interpolate({
+    inputRange: [0.01, 0.6, 1],
+    outputRange: [0.01, 0.3, 1],
+  });
+  const translateY = itemAnimation.interpolate({
+    inputRange: [0.01, 0.6, 1],
+    outputRange: [-20, -10, 0],
+  });
+
+  //Thực hiện Animation:
+  const activeAnimation = () => {
+    Animated.timing(itemAnimation, {
+      toValue: 1,
+      duration: 600,
+      delay: 100,
+      useNativeDriver: true,
+    }).start();
+  };
+  useLayoutEffect(() => {
+    const timer = setTimeout(() => {
+      setStateLoading(false);
+      activeAnimation();
+    }, 800);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   //Then số lượng dòng menu:
   const renderRow = () => {
@@ -52,59 +84,41 @@ export default function MenuHome(props) {
     const sizeImg = sizeItem / 1.4;
     if (item.type == 'icon') {
       return (
-        <View
-          style={{
-            width: sizeItem,
-            height: sizeItem,
-            marginTop: SIZE.width(1),
-            backgroundColor: '#F9F0F0',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: SIZE.width(3),
-            margin: 5,
-          }}>
-          <AppImage
-            source={{
-              uri: item.img,
-            }}
+        <Animated.View
+          key={`${item.id}`}
+          style={[
+            {
+              opacity,
+              transform: [{scale}, {translateY}, {perspective: 1000}],
+            },
+          ]}>
+          <View
             style={{
-              height: sizeImg,
-              width: sizeImg,
-            }}></AppImage>
-          <AppText style={{fontSize: SIZE.H4, fontWeight: 'bold'}}>
-            {item.name}
-          </AppText>
-        </View>
+              width: sizeItem,
+              height: sizeItem,
+              marginTop: SIZE.width(1),
+              backgroundColor: '#F9F0F0',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: SIZE.width(3),
+              margin: 5,
+            }}>
+            <AppImage
+              source={{
+                uri: item.img,
+              }}
+              style={{
+                height: sizeImg,
+                width: sizeImg,
+              }}></AppImage>
+            <AppText style={{fontSize: SIZE.H4, fontWeight: 'bold'}}>
+              {item.name}
+            </AppText>
+          </View>
+        </Animated.View>
       );
     }
-    if (item.type == 'img') {
-      return (
-        <View
-          style={{
-            width: sizeItem,
-            height: sizeItem,
-            marginTop: SIZE.width(1),
-            backgroundColor: '#F9F0F0',
-            alignItems: 'center',
-            justifyContent: 'center',
-            borderRadius: SIZE.width(3),
-            margin: 5,
-          }}>
-          <AppImage
-            source={{
-              uri:
-                'https://banner2.cleanpng.com/20180622/tqt/kisspng-computer-icons-user-clip-art-consignee-5b2d25107181a2.1674732415296852644649.jpg',
-            }}
-            style={{
-              height: sizeImg,
-              width: sizeImg,
-            }}></AppImage>
-          <AppText style={{fontSize: SIZE.H4, fontWeight: 'bold'}}>
-            haha
-          </AppText>
-        </View>
-      );
-    }
+
     return (
       <View
         style={{
@@ -133,6 +147,18 @@ export default function MenuHome(props) {
     });
   };
 
+  if (loading) {
+    return (
+      <View
+        style={{
+          minHeight: SIZE.height(40),
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Loading></Loading>
+      </View>
+    );
+  }
   return (
     <View
       style={{

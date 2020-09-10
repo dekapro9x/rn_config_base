@@ -1,14 +1,13 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {View, Dimensions, Platform} from 'react-native';
 import Spinner from 'react-native-spinkit';
 import {COLOR} from '../utils/resource';
-import {ContextContainer} from '../contexts/AppContext';
 const {width} = Dimensions.get('window');
 
 const Loading = (props) => {
   const {style, sizeSpinner} = props;
   const isAndroid = Platform.OS === 'android';
-  const loadingType = 'Circle';
+  const loadingType = 'Wave';
   const size = isAndroid ? 36 : 24;
   return (
     <View
@@ -25,7 +24,7 @@ const Loading = (props) => {
       <Spinner
         size={sizeSpinner || size}
         type={loadingType}
-        color={COLOR.COLOR_GREEN}
+        color={COLOR.milk}
       />
     </View>
   );

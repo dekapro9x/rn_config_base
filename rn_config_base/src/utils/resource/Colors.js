@@ -1,5 +1,6 @@
 const COLOR = {
   white: '#FFFFFF',
+  milk: '#F9F0F0',
   dark: '#2A2A2A',
   main_color_bold: '#38761D',
   main_color: '#6AA84F',
