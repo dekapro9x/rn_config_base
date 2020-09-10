@@ -10,15 +10,15 @@ import {COLOR, SIZE} from '../../../utils';
 //Component:
 import MenuHome from './MenuHome';
 
-export default function TabViewHome() {
+export default function TabViewHome(props) {
   //Index: Vị trí tabview đầu tiên được active:
   const [index, setIndex] = useState(0);
-
+  const {dataMenuHome} = props;
   //Routes số lượng tabview:
   const [routes] = useState([
     {
       key: 'menu',
-      title: 'Menu Item',
+      title: 'Menu',
       img:
         'https://i.pinimg.com/originals/84/28/02/84280285c99276db354c04caeead6302.png',
     },
@@ -51,15 +51,15 @@ export default function TabViewHome() {
   const renderScene = ({route}) => {
     switch (route.key) {
       case 'menu':
-        return <MenuHome></MenuHome>;
+        return <MenuHome dataMenuHome={dataMenuHome}></MenuHome>;
       case 'review':
-        return <MenuHome></MenuHome>;
+        return <View></View>;
       case 'map':
-        return <MenuHome></MenuHome>;
+        return <View></View>;
       case 'find':
-        return <MenuHome></MenuHome>;
+        return <View></View>;
       default:
-        return <MenuHome></MenuHome>;
+        return <View></View>;
     }
   };
 
@@ -120,7 +120,7 @@ export default function TabViewHome() {
         renderTabBar={renderTabBar}
         onIndexChange={onChangeTabView}
         initialLayout={SIZE.width(100)}
-        style={{height: 100, width: SIZE.width(100)}}
+        style={{width: SIZE.width(100)}}
         tabBarPosition={'top'}
         renderPager={(props) => <ScrollPager {...props}></ScrollPager>}
       />

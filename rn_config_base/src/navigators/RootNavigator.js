@@ -17,6 +17,7 @@ import AuthNavigator from './AuthNavigatior';
 
 //Các màn hình không cần xác thực dùng cho toàn App:
 import AppIntro from '../screens/AppIntro/AppIntro';
+import Webview from '../screens/Webview/Webview';
 
 //Màn hình Drawer:
 import DrawerNavigator from './DrawerNavigator';
@@ -59,6 +60,7 @@ function RootNavigator() {
             name={KEY_NAVIGATION.drawer}
             component={DrawerNavigator}
           />
+          <RootStack.Screen name={KEY_NAVIGATION.webview} component={Webview} />
         </RootStack.Navigator>
       </NavigationContainer>
     </>

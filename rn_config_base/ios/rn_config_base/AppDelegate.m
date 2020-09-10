@@ -29,6 +29,11 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+  // Thêm dòng này để chuyển đổi ngày tháng theo ngôn ngữ được cài đặt trong máy.
+NSString *currentLanguage = [[NSLocale preferredLanguages] firstObject];
+[[UIDatePicker appearance] setLocale:[[NSLocale alloc]initWithLocaleIdentifier:currentLanguage]];
+
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif

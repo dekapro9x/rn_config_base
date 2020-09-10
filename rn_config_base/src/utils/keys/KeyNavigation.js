@@ -7,5 +7,6 @@ const KEY_NAVIGATION = {
   policy: 'POLICY',
   entry: 'ENTRY',
   drawer: 'DRAWER',
+  webview: 'WEBVIEW',
 };
 export {KEY_NAVIGATION};

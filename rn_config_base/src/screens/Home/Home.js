@@ -1,29 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   View,
-  TouchableOpacity,
   ScrollView,
   ImageBackground,
+  RefreshControl,
 } from 'react-native';
-import {DrawerActions} from '@react-navigation/native';
 import {COLOR, SIZE} from '../../utils';
 
 //Component:
 import HeaderHome from './items/HeaderHome';
 import SliderHome from './items/SliderHome';
 import TabViewHome from './items/TabViewHome';
+
 //Data:
 import DATA_SLIDER_HOME from './data/DataSlider';
-import {dataMeuHome} from './data/DataMenu';
+import {DATA_MENU_HOME} from './data/DataMenu';
 
 export default function Home({navigation}) {
+  const [isRefresh, setStateIsRefresh] = useState(false);
+  const onRefreshHome = () => {
+    setStateIsRefresh(true);
+    setTimeout(() => {
+      setStateIsRefresh(false);
+    }, 3000);
+  };
   return (
     <ScrollView
+      refreshControl={
+        <RefreshControl refreshing={isRefresh} onRefresh={onRefreshHome} />
+      }
       showsVerticalScrollIndicator={false}
       style={{backgroundColor: '#F9F0F0', flex: 1}}>
       <SafeAreaView style={{backgroundColor: COLOR.white}} />
-      {/* <HeaderHome></HeaderHome> */}
+      <HeaderHome></HeaderHome>
       {/* Ảnh Slider. */}
       <View>
         <View
@@ -65,10 +75,9 @@ export default function Home({navigation}) {
       <ImageBackground
         source={{uri: 'https://sackim.com/wp-content/uploads/2020/01/14.jpg'}}
         style={{
-          height: SIZE.height(100),
           width: SIZE.width(100),
         }}>
-        <TabViewHome></TabViewHome>
+        <TabViewHome dataMenuHome={DATA_MENU_HOME}></TabViewHome>
       </ImageBackground>
     </ScrollView>
   );

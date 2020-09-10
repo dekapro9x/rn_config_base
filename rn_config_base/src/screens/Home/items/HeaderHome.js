@@ -1,25 +1,36 @@
 import React from 'react';
 import {View, TouchableOpacity} from 'react-native';
 import {SIZE} from '../../../utils';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function HeaderHome() {
   return (
     <View
       style={{
-        height: SIZE.width(15),
+        height: SIZE.width(12),
         width: SIZE.width(100),
-        backgroundColor: 'red',
         flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
       }}>
       <TouchableOpacity
-        onPress={() => {
-          navigation.dispatch(DrawerActions.openDrawer());
-        }}
+        onPress={() => {}}
         style={{
-          height: SIZE.width(15),
           width: SIZE.width(30),
-          backgroundColor: 'green',
-        }}></TouchableOpacity>
+          justifyContent: 'center',
+        }}>
+        <FontAwesome
+          style={{marginLeft: SIZE.width(2)}}
+          name={'user-circle-o'}
+          size={32}
+          color={'black'}></FontAwesome>
+      </TouchableOpacity>
+      <Ionicons
+        style={{marginRight: SIZE.width(2)}}
+        name={'notifications'}
+        size={32}
+        color={'black'}></Ionicons>
     </View>
   );
 }
