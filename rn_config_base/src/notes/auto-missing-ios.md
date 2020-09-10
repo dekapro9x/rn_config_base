@@ -3,4 +3,4 @@ https://stackoverflow.com/questions/35739361/itsappusesnonexemptencryption-expor
 Thêm :
 <key>ITSAppUsesNonExemptEncryption</key>  
 <false/>
-Vào info.split
+Vào info.split dòng 21

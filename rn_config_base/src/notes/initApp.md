@@ -13,6 +13,7 @@ Sau khi init app các thư viện bắt buộc phải cài:
 12:react-native-modal : https://github.com/react-native-community/react-native-modal : Tạo màn hình modal.
 13:react-native-modal-datetime-picker && react-native-datepicker : https://github.com/mmazzarolo/react-native-modal-datetime-picker && https://github.com/react-native-community/datetimepicker : Chọn ngày tháng năm sinh.
 14: react-native-pdf: https://github.com/wonday/react-native-pdf: Trong webview có phần đọc PDF nên cần cài thư viện này.
+15: yarn add react-native-permissions: https://github.com/react-native-community/react-native-permissions : Kiểm tra quyền của App.
 
 Cấu hình lại file gitignore cho từng App tránh hiện tượng đẩy lên git các file không cần thiết gây nặng Git.
 Coppy file react-native.config để cấu hình font và vector icon.

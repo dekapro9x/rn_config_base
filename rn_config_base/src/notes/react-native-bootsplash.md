@@ -2,8 +2,8 @@ Sau khi cấu hình react-native-bootsplash
 
 Chạy lệnh:
 yarn generate-bootsplash
-yarn run v1.22.4
-\$ /Users/\_coz/Projects/rn_config_base/rn_config_base/node_modules/.bin/generate-bootsplash
+
+Run terminal :yarn run v1.22.4\$ /Users/\_coz/Projects/rn_config_base/rn_config_base/node_modules/.bin/generate-bootsplash:
 ✔ The path to the root of your React Native project … ./
 ✔ The path to your static assets directory … assets
 ✔ Your original icon file … assets/bootsplash_logo.jpg

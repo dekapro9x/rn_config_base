@@ -23,3 +23,7 @@ File cer này chứa mã hóa certificate .Sau khi download về rồi thì mở
 Vào Xcode chọn projects :Chọn Signing&Capability => Chọn automatic manage signing chọn vào TeamDev hoặc công ty đã có chứng chỉ mà mình vừa request lên.
 Pase bundle id mà vừa đăng kí vào để nó tự automatic singing vào sinh ra cho 1 Profiles và có thể build App và đẩy.
 Lần đầu cài App phải chạy lên máy thật thì mới archive được.
+
+Vào AppStoreConnect:
+Tạp 1 App mới chọn Full Access
+Chọn bundle id tương ứng để Xcode đẩy App lên.
