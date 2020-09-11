@@ -5,6 +5,8 @@ import {
   ScrollView,
   ImageBackground,
   RefreshControl,
+  Image,
+  Text,
 } from 'react-native';
 import {COLOR, SIZE} from '../../utils';
 
@@ -31,54 +33,40 @@ export default function Home({navigation}) {
         <RefreshControl refreshing={isRefresh} onRefresh={onRefreshHome} />
       }
       showsVerticalScrollIndicator={false}
-      style={{backgroundColor: '#F9F0F0', flex: 1}}>
+      style={{flex: 1}}>
       <SafeAreaView style={{backgroundColor: COLOR.white}} />
       <HeaderHome></HeaderHome>
-      {/* Ảnh Slider. */}
       <View>
-        <View
+        <Image
+          source={{
+            uri:
+              'https://znews-photo.zadn.vn/w660/Uploaded/mdf_eioxrd/2019_10_09/1.jpg',
+          }}
           style={{
-            borderBottomLeftRadius: 40,
-            borderBottomRightRadius: 40,
-            overflow: 'hidden',
-          }}>
-          <ImageBackground
-            source={{
-              uri:
-                'https://znews-photo.zadn.vn/w660/Uploaded/mdf_eioxrd/2019_10_09/1.jpg',
-            }}
-            style={{
-              height: SIZE.height(25),
-              width: SIZE.width(100),
-            }}></ImageBackground>
-        </View>
-        <View
-          style={{
-            minHeight: SIZE.height(20),
-            width: SIZE.width(100),
-            backgroundColor: '#F9F0F0',
-          }}></View>
-        <View
-          style={{
-            position: 'absolute',
             height: SIZE.height(25),
-            top: SIZE.height(18),
-            alignItems: 'center',
+            width: SIZE.width(100),
+            position: 'absolute',
+            top: 0,
+            right: 0,
+          }}></Image>
+        <View
+          style={{
+            height: SIZE.height(25),
+            marginTop: SIZE.height(18),
+            marginHorizontal: SIZE.width(5),
             borderRadius: 20,
             overflow: 'hidden',
-            left: 20,
-            right: 20,
           }}>
           <SliderHome dataSlider={DATA_SLIDER_HOME}></SliderHome>
         </View>
+        <ImageBackground
+          source={{uri: 'https://sackim.com/wp-content/uploads/2020/01/14.jpg'}}
+          style={{
+            width: SIZE.width(100),
+          }}>
+          <TabViewHome dataMenuHome={DATA_MENU_HOME}></TabViewHome>
+        </ImageBackground>
       </View>
-      <ImageBackground
-        source={{uri: 'https://sackim.com/wp-content/uploads/2020/01/14.jpg'}}
-        style={{
-          width: SIZE.width(100),
-        }}>
-        <TabViewHome dataMenuHome={DATA_MENU_HOME}></TabViewHome>
-      </ImageBackground>
     </ScrollView>
   );
 }

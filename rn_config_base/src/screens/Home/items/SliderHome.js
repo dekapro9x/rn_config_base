@@ -41,9 +41,6 @@ const SliderHome = (props) => {
 
   return (
     <Swiper
-      style={{
-        height: (SIZE.device_width * 9) / 10,
-      }}
       //renderPagination Dùng để custom lại Slider với index dot tương ứng, với tỷ lệ khung hình mà không bị vượt quá giới hạn cho phép.
       // Slider bao gồm cả Ảnh hiển thị và dấu chấm index.
       renderPagination={(indexActive, total, context) => {
