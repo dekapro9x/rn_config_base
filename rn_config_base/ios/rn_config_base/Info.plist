@@ -39,8 +39,16 @@
 				</dict>
 			</dict>
 		</dict>
+
+		<key>NSCameraUsageDescription</key>
+		<string>Xin quyền Camera.</string>
+		<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+		<string>Xin quyền vị trí.</string>
+		<key>NSLocationAlwaysUsageDescription</key>
+		<string>Xin quyền vị trí.</string>
 		<key>NSLocationWhenInUseUsageDescription</key>
-		<string></string>
+		<string>Xin quyền vị trí.</string>
+
 		<key>UIAppFonts</key>
 		<array>
 			<string>MotoyaLMaru.ttf</string>

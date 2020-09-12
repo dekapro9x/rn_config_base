@@ -6,8 +6,10 @@ cd ios && pod install.
 Trong pod :
 
 Thêm đoạn code sau vào dòng :
+Nếu mà có lỗi If you see a No permission handler detected error: Make sure that you have at least one permission handler set up. In some cases the Xcode cache needs to be cleared (Xcode -> Product -> Clean Build Folder)
+Ít nhất xin 1 quyền cho app mà xóa xóa cache đi.
 
-# Cấu hình Permission:
+# Cấu hình Permission: IOS
 
 permissions_path = '../node_modules/react-native-permissions/ios'
 pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
@@ -30,5 +32,18 @@ end
 end
 end
 end
+
+# info.splist thêm đoạn sau để kiểm tra quyền :
+
+    	<key>NSCameraUsageDescription</key>
+    	<string>Camera</string>
+    	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    	<string>Location</string>
+    	<key>NSLocationAlwaysUsageDescription</key>
+    	<string>Location</string>
+    	<key>NSLocationWhenInUseUsageDescription</key>
+    	<string>Location</string>
+
+# Cấu hình Permission: Andorid:
 
 Clear DriverData tránh lưu cache và chạy lại:
