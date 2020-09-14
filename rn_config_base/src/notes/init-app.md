@@ -16,6 +16,7 @@ Sau khi init app các thư viện bắt buộc phải cài:
 15: yarn add react-native-permissions: https://github.com/react-native-community/react-native-permissions : Kiểm tra quyền của App.
 16:react-native-reanimated: https://github.com/software-mansion/react-native-reanimated : Hiệu ứng loadding cho App và các Component.
 17: react-native-geolocation-service : https://github.com/Agontuk/react-native-geolocation-service :Lấy Location ( Bắt buộc đi kèm với permission xin 1 trong các quyền vị trí tránh lỗi trong bug App)
+18:hex-to-rgba: https://github.com/misund/hex-to-rgba#readme : Chuyển đổi mã màu hex sang rgba.
 
 Cấu hình lại file gitignore cho từng App tránh hiện tượng đẩy lên git các file không cần thiết gây nặng Git.
 Coppy file react-native.config để cấu hình font và vector icon.

@@ -1,4 +1,4 @@
-import {AccountLocal} from '../modules';
+import {AccountLocal} from '../modules/AccountLocal';
 
 const changeList = {};
 
