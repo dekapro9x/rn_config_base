@@ -26,7 +26,7 @@ export default function TabViewHome(props) {
       key: 'review',
       title: 'Review',
       img:
-        'https://mjmcarpetcleaning.com/wp-content/uploads/2019/03/Google-Review-Icon.jpg',
+        'https://www.iconfinder.com/data/icons/feedback-12/512/Online_feedback-512.png',
     },
     {
       key: 'map',

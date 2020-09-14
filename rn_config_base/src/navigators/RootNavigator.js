@@ -18,6 +18,11 @@ import AuthNavigator from './AuthNavigatior';
 //Các màn hình không cần xác thực dùng cho toàn App:
 import AppIntro from '../screens/AppIntro/AppIntro';
 import Webview from '../screens/Webview/Webview';
+import Location from '../screens/Location/Location';
+import Map from '../screens/Map/Map';
+import Notification from '../screens/Notification/Notification';
+import QR from '../screens/QR/QR';
+import Video from '../screens/Video/Video';
 
 //Màn hình Drawer:
 import DrawerNavigator from './DrawerNavigator';
@@ -60,6 +65,17 @@ function RootNavigator() {
             name={KEY_NAVIGATION.drawer}
             component={DrawerNavigator}
           />
+          <RootStack.Screen
+            name={KEY_NAVIGATION.location}
+            component={Location}
+          />
+          <RootStack.Screen name={KEY_NAVIGATION.map} component={Map} />
+          <RootStack.Screen
+            name={KEY_NAVIGATION.notification}
+            component={Notification}
+          />
+          <RootStack.Screen name={KEY_NAVIGATION.qr} component={QR} />
+          <RootStack.Screen name={KEY_NAVIGATION.video} component={Video} />
           <RootStack.Screen name={KEY_NAVIGATION.webview} component={Webview} />
         </RootStack.Navigator>
       </NavigationContainer>

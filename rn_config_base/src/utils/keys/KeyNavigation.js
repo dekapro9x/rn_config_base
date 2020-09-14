@@ -8,5 +8,11 @@ const KEY_NAVIGATION = {
   entry: 'ENTRY',
   drawer: 'DRAWER',
   webview: 'WEBVIEW',
+  location: 'LOCATION',
+  video: 'VIDEO',
+  map: 'MAP',
+  notification: 'NOTIFICATION',
+  qr: 'QR',
+  youtobe: 'YOUTOBE',
 };
 export {KEY_NAVIGATION};
