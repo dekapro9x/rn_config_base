@@ -6,7 +6,6 @@ import {
   ImageBackground,
   RefreshControl,
   Image,
-  Text,
 } from 'react-native';
 import {COLOR, SIZE} from '../../utils';
 
@@ -19,12 +18,16 @@ import TabViewHome from './items/TabViewHome';
 import DATA_SLIDER_HOME from './data/DataSlider';
 import {DATA_MENU_HOME} from './data/DataMenu';
 
+//Services:
+import {BottomService} from '../../utils/services/BottomService';
+
 export default function Home({navigation}) {
   const [isRefresh, setStateIsRefresh] = useState(false);
   const onRefreshHome = () => {
     setStateIsRefresh(true);
     setTimeout(() => {
       setStateIsRefresh(false);
+      BottomService.setDisplay(false);
     }, 3000);
   };
   return (
