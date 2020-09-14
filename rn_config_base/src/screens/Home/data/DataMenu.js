@@ -14,9 +14,8 @@ const DATA_MENU_HOME = [
       id: 2,
       type: 'icon',
       screen: 'WEBVIEW',
-      img:
-        'https://i.pinimg.com/originals/02/4d/fd/024dfd0585c4424f4e9f79129088666f.gif',
-      icon: '',
+      img: 'https://image.flaticon.com/icons/png/512/337/337946.png',
+
       name: 'PDF',
       link:
         'https://s3-ap-northeast-1.amazonaws.com/komeda/pdf/08fe3486-0e81-49f9-92de-6215ad6593c5sample3.pdf',
@@ -25,16 +24,23 @@ const DATA_MENU_HOME = [
       id: 3,
       type: 'icon',
       screen: '',
-      img: 'https://img.icons8.com/cotton/2x/worldwide-location--v2.png',
-      icon: '',
+      img: 'https://media1.giphy.com/media/SWWLF8WluVJ5vJjMln/giphy.gif',
+
       name: 'Location',
       link: '',
     },
   ],
   [
-    {id: 3, type: 'icon', screen: '', img: '', icon: '', name: '', link: ''},
-    {id: 4, type: 'img', screen: '', img: '', icon: '', link: ''},
-    {id: 5, type: 'icon', screen: '', img: '', icon: '', link: ''},
+    {
+      id: 3,
+      type: 'icon',
+      screen: 'Map',
+      img: 'https://img.icons8.com/cotton/2x/worldwide-location--v2.png',
+      name: 'Map',
+      link: '',
+    },
+    {id: 4, type: 'icon', screen: '', img: '', link: ''},
+    {id: 5, type: 'icon', screen: '', img: '', link: ''},
   ],
   // [
   //   {id: 6, type: 1, screen: '', img: '', icon: ''},

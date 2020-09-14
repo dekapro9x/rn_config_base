@@ -44,6 +44,14 @@ end
     	<key>NSLocationWhenInUseUsageDescription</key>
     	<string>Location</string>
 
-# Cấu hình Permission: Andorid:
+# Cấu hình Permission: Andorid trong AndroidManifest.xml:
+
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.CAMERA" />
 
 Clear DriverData tránh lưu cache và chạy lại:
