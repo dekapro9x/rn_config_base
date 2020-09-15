@@ -265,7 +265,7 @@ PODS:
     - React
   - react-native-spinkit (1.4.1):
     - React
-  - react-native-webview (10.8.3):
+  - react-native-webview (10.9.0):
     - React
   - React-RCTActionSheet (0.63.2):
     - React-Core/RCTActionSheetHeaders (= 0.63.2)
@@ -353,9 +353,9 @@ PODS:
     - React
   - RNVectorIcons (7.1.0):
     - React
-  - SDWebImage (5.9.0):
-    - SDWebImage/Core (= 5.9.0)
-  - SDWebImage/Core (5.9.0)
+  - SDWebImage (5.9.1):
+    - SDWebImage/Core (= 5.9.1)
+  - SDWebImage/Core (5.9.1)
   - SDWebImageWebPCoder (0.6.1):
     - libwebp (~> 1.0)
     - SDWebImage/Core (~> 5.7)
@@ -594,7 +594,7 @@ SPEC CHECKSUMS:
   react-native-progress-view: 8529425acbb93f918f3675bbece48f6b551b1384
   react-native-safe-area-context: 955ecfce672683b495d9294d2f154a9ad1d9796b
   react-native-spinkit: da294fd828216ad211fe36a5c14c1e09f09e62db
-  react-native-webview: 598605cd213f5096e695f5b33fbee210a47e60ab
+  react-native-webview: bfe5436586b214759bd5043658863549fffc8e92
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
   React-RCTAnimation: 9a883bbe1e9d2e158d4fb53765ed64c8dc2200c6
   React-RCTBlob: 39cf0ece1927996c4466510e25d2105f67010e13
@@ -617,7 +617,7 @@ SPEC CHECKSUMS:
   RNScreens: b748efec66e095134c7166ca333b628cd7e6f3e2
   RNSVG: ce9d996113475209013317e48b05c21ee988d42e
   RNVectorIcons: bc69e6a278b14842063605de32bec61f0b251a59
-  SDWebImage: 62ae4a18473520c67b79e9724c31a63599cc9423
+  SDWebImage: a990c053fff71e388a10f3357edb0be17929c9c5
   SDWebImageWebPCoder: d0dac55073088d24b2ac1b191a71a8f8d0adac21
   XCDYouTubeKit: 5d50bbacdd9fedf26fb578bab901d946ff3d064c
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
