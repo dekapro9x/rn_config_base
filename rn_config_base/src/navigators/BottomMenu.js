@@ -20,7 +20,7 @@ export default function BottomMenu() {
       return (
         <AppImageWithTextButton
           onPress={pressMenu(item)}
-          textStyle={{color: COLOR.white, fontSize: SIZE.H6}}
+          textStyle={{ fontSize: SIZE.H6}}
           styleImage={{width: SIZE.width(8), height: SIZE.width(8)}}
           style={{
             justifyContent: 'center',
@@ -45,7 +45,6 @@ export default function BottomMenu() {
         width: SIZE.device_width,
         justifyContent: 'space-around',
         alignItems: 'flex-end',
-        backgroundColor: COLOR.red,
         paddingVertical: 10,
       }}>
       {renderItem()}

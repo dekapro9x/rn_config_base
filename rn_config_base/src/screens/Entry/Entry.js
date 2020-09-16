@@ -39,7 +39,7 @@ const Entry = ({navigation}) => {
           backgroundColor: COLOR.BG_TRANSPARENT_30,
         }}>
         <AppImage
-          source={require('../../images/splash.jpg')}
+          source={{uri:"https://scontent.fhan3-3.fna.fbcdn.net/v/t1.0-9/39753000_425302344664113_1258285985909702656_n.png?_nc_cat=101&_nc_sid=85a577&_nc_ohc=zo_Cnh_a54kAX9k_0BZ&_nc_ht=scontent.fhan3-3.fna&oh=65a5d4716b77d4d65690e1bd582dfd65&oe=5F85CA34"}}
           style={{
             marginTop: SIZE.width(55),
             height: SIZE.width(50),

@@ -59,30 +59,20 @@ const DATA_MENU_HOME = [
       link: '',
     },
   ],
-  [
-    {
-      id: 6,
-      type: 'icon',
-      screen: KEY_NAVIGATION.video,
-      img:
-        'https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif',
-      name: 'Youtobe',
-      icon: '',
-    },
-    {id: 7, type: 'none', screen: '', img: '', icon: ''},
-    {id: 8, type: 'none', screen: '', img: '', icon: ''},
-  ],
   // [
-  //   {id: 9,  type: 'icon', screen: '', img: '', icon: ''},
-  //   {id: 10,  type: 'icon', screen: '', img: '', icon: ''},
-  //   {id: 11,  type: 'icon', screen: '', img: '', icon: ''},
+  //   {
+  //     id: 6,
+  //     type: 'icon',
+  //     screen: KEY_NAVIGATION.video,
+  //     img:
+  //       'https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif',
+  //     name: 'Youtobe',
+  //     icon: '',
+  //   },
+  //   {id: 7, type: 'none', screen: '', img: '', icon: ''},
+  //   {id: 8, type: 'none', screen: '', img: '', icon: ''},
   // ],
-  // [
-  //   {id: 12,  type: 'icon', screen: '', img: '', icon: ''},
-  //   {id: 13,  type: 'icon', screen: '', img: '', icon: ''},
-  //   {id: 14,  type: 'icon', screen: '', img: '', icon: ''},
-  // ],
-  // [{id: 15,  type: 'icon', screen: '', img: '', icon: ''}],
+
 ];
 
 export {DATA_MENU_HOME};
