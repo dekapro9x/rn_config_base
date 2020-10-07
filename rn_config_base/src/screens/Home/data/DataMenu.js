@@ -59,19 +59,19 @@ const DATA_MENU_HOME = [
       link: '',
     },
   ],
-  // [
-  //   {
-  //     id: 6,
-  //     type: 'icon',
-  //     screen: KEY_NAVIGATION.video,
-  //     img:
-  //       'https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif',
-  //     name: 'Youtobe',
-  //     icon: '',
-  //   },
-  //   {id: 7, type: 'none', screen: '', img: '', icon: ''},
-  //   {id: 8, type: 'none', screen: '', img: '', icon: ''},
-  // ],
+  [
+    {
+      id: 6,
+      type: 'icon',
+      screen: KEY_NAVIGATION.video,
+      img:
+        'https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif',
+      name: 'Youtobe',
+      icon: '',
+    },
+    {id: 7, type: 'none', screen: '', img: '', icon: ''},
+    {id: 8, type: 'none', screen: '', img: '', icon: ''},
+  ],
 
 ];
 
