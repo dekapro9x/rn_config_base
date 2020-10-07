@@ -23,7 +23,7 @@ import Map from '../screens/Map/Map';
 import Notification from '../screens/Notification/Notification';
 import QR from '../screens/QR/QR';
 import Video from '../screens/Video/Video';
-
+import ChatScreen from '../screens/Chat/ChatScreen'; 
 //Màn hình Drawer:
 import DrawerNavigator from './DrawerNavigator';
 
@@ -77,6 +77,7 @@ function RootNavigator() {
           <RootStack.Screen name={KEY_NAVIGATION.qr} component={QR} />
           <RootStack.Screen name={KEY_NAVIGATION.video} component={Video} />
           <RootStack.Screen name={KEY_NAVIGATION.webview} component={Webview} />
+          <RootStack.Screen name={KEY_NAVIGATION.chat} component={ChatScreen} />
         </RootStack.Navigator>
       </NavigationContainer>
     </>

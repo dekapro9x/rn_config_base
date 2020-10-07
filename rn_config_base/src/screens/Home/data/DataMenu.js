@@ -66,13 +66,20 @@ const DATA_MENU_HOME = [
       screen: KEY_NAVIGATION.video,
       img:
         'https://cliply.co/wp-content/uploads/2019/07/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif',
-      name: 'Youtobe',
+      name: 'YouTube',
       icon: '',
     },
-    {id: 7, type: 'none', screen: '', img: '', icon: ''},
+    {
+      id: 7,
+      type: 'icon',
+      screen: KEY_NAVIGATION.chat,
+      img:
+        'https://media4.giphy.com/media/26FPJGjhefSJuaRhu/giphy.gif?cid=ecf05e47c6cttgeiizc8cme1hv7yk8nnqmapzeviiuifyv8m&rid=giphy.gif',
+        name:'Chat',
+      icon: '',
+    },
     {id: 8, type: 'none', screen: '', img: '', icon: ''},
   ],
-
 ];
 
 export {DATA_MENU_HOME};

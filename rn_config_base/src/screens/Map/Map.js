@@ -6,7 +6,7 @@ export default class Map extends Component {
     return (
       <>
       <SafeAreaView/>
-        <AppHeader title={'POLICY'} leftGoBack={true}></AppHeader>
+        <AppHeader title={'Map'} leftGoBack={true}></AppHeader>
         <Text> Map </Text>
       </>
     );
